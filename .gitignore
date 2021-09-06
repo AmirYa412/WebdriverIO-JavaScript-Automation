@@ -1,0 +1,8 @@
+.idea
+/reports/allure/allure-report
+/reports/allure/allure-results
+/reports/html-reports/suite*
+node_modules
+package-lock.json
+
+
