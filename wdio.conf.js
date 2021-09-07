@@ -4,16 +4,14 @@ let reportAggregator = ReportAggregator
 
 const envPrefix = (!process.env.ENV) ? "prod" : process.env.ENV                    // Default test env: Production
 const env = new TestedEnvironment(envPrefix)
-global.testsData = env.testsData                               // Make global so we can access env details & data
+global.testsData = env.testsData                               // Make global so we can access env.testsData in tests
 
 exports.config = {
     specs: [
         './test/specs/**/*.js'
     ],
     suites: {
-        login: ['./test/specs/test-login.js'],
-        alerts: ['./test/specs/test-js-alert.js'],
-        elements: ['./test/specs/test-add-elements.js'],
+        sanity: ['./test/specs/test-login.js', './test/specs/test-js-alert.js', './test/specs/test-add-elements.js'],
         hovers: ['./test/specs/test-hovers.js']
     },
     exclude: [
@@ -23,7 +21,7 @@ exports.config = {
     // If you have trouble getting all important capabilities together, check out the
     // https://docs.saucelabs.com/reference/platforms-configurator
     capabilities: [{
-        maxInstances: 5,
+        maxInstances: 1,
         browserName: 'chrome',
         acceptInsecureCerts: true
     }],
@@ -66,7 +64,7 @@ exports.config = {
             reportTitle: 'Master Report',
             browserName : capabilities.browserName,
             collapseTests: true
-        });
+        })
         reportAggregator.clean()
     },
 
