@@ -1,40 +1,36 @@
-import JavaScriptAlerts    from "../../page-objects/js-alerts/js-alerts-page"
-import {assert}            from "chai"
+import JavaScriptAlertsPage    from "../../page-objects/js-alerts/js-alerts-page"
+import {assert}                from "chai"
 
 
-const singleAlertMsg = "I am a JS Alert"
-const confirmAlertMsg = "I am a JS Confirm"
-const promptAlertMsg = "I am a JS prompt"
-
-
+const testData = global.testsData["JavaScriptAlertsPage"]
 describe("JavaScriptAlertPage", () => {
 
     // Assertion lib:      Chai assert
 
     it("should show js single alert", async () => {
-        await JavaScriptAlerts.navigate()
-        await JavaScriptAlerts.clickAlertButton("single")
-        assert.isTrue(await browser.getAlertText() === singleAlertMsg)
+        await JavaScriptAlertsPage.navigate()
+        await JavaScriptAlertsPage.clickAlertButton("single")
+        assert.isTrue(await browser.getAlertText() === testData["singleAlertMsg"])
         await browser.acceptAlert()
         assert.isFalse(await browser.isAlertOpen())
     })
 
     it("should cancel js confirm alert", async () => {
-        await JavaScriptAlerts.navigate()
-        await JavaScriptAlerts.clickAlertButton("confirm")
-        assert.isTrue(await browser.getAlertText() === confirmAlertMsg)
+        await JavaScriptAlertsPage.navigate()
+        await JavaScriptAlertsPage.clickAlertButton("confirm")
+        assert.isTrue(await browser.getAlertText() === testData["confirmAlertMsg"])
         await browser.dismissAlert()
         assert.isFalse(await browser.isAlertOpen())
     })
 
     it("should display js prompt alert input", async () => {
-        await JavaScriptAlerts.navigate()
-        await JavaScriptAlerts.clickAlertButton("prompt")
-        assert.isTrue(await browser.getAlertText() === promptAlertMsg)
-        const promptMsg = "Hello Wo1rld!"
+        await JavaScriptAlertsPage.navigate()
+        await JavaScriptAlertsPage.clickAlertButton("prompt")
+        assert.isTrue(await browser.getAlertText() === testData["promptAlertMsg"])
+        const promptMsg = "Hello World!"
         await browser.sendAlertText(promptMsg)
         await browser.acceptAlert()
-        const resultMsg = await JavaScriptAlerts.resultText.getText()
+        const resultMsg = await JavaScriptAlertsPage.resultText.getText()
         assert.include(resultMsg, promptMsg)
     })
 })

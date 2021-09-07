@@ -1,7 +1,7 @@
 import Page    from "../base-page"
 
 
-class JavaScriptAlerts extends Page {
+class JavaScriptAlertsPage extends Page {
 
     constructor() {
         super()
@@ -27,4 +27,4 @@ class JavaScriptAlerts extends Page {
     }
 }
 
-export default new JavaScriptAlerts()
+export default new JavaScriptAlertsPage()

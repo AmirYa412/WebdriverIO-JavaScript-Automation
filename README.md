@@ -2,6 +2,7 @@
 
 ### Info
 This repo contains a Web UI test automation project written in JavaScript. It is based on ```Mocha``` framework, ```WebdriverIO(v7)``` and page object  model.
+Project is loading different test data files according to testedEnvs (default env: production), more can be found in config file.
 Each test file showing an example of different assertion library:
 
 * Node.js built-in assert
@@ -27,6 +28,7 @@ You can run 3 different test files and generate an Allure & HTML reports.
 | ```npx wdio --suite elements```  | Run test-add-elements |
 | ```npx wdio --suite alerts login```  | Run 2 suites (2 files in this case) |
 | ```npx wdio --spec ./test/specs/test-login.js```  | Run specific file |
+| ```ENV=qa npx wdio```  | Run on "QA" dummy env |
 
 
 ### Reports

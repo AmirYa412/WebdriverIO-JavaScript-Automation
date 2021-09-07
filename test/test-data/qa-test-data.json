@@ -1,0 +1,16 @@
+{
+  "LoginPage": {
+    "username": "qa-user",
+    "password": "passwordForQAenv",
+    "loginExpectedMsg": "You logged into a QA env secure area!",
+    "logoutExpectedMsg": "You logged out of the QA env secure area!",
+    "blockedExpectedMsg": "You must login to view the QA env secure area!"
+  },
+  "JavaScriptAlertsPage": {
+    "singleAlertMsg": "I am a JS Alert in QA env",
+    "confirmAlertMsg": "I am a JS Confirm in QA env",
+    "promptAlertMsg": "I am a JS prompt in QA env"
+  },
+  "AddElementsPage": {},
+  "HoversPage": {}
+}
