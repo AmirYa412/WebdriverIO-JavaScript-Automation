@@ -22,11 +22,13 @@ class LoginPage extends Page {
     }
 
     async fillLoginForm(username, password) {
+        await this.inputUsername.waitForDisplayed()
         await this.inputUsername.setValue(username)
         await this.inputPassword.setValue(password)
     }
 
     async submitLogin() {
+        await this.submitBtn.waitForDisplayed()
         await this.submitBtn.click()
     }
 

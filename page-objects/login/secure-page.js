@@ -16,6 +16,7 @@ class SecurePage extends Page {
     }
 
     async logout() {
+        await this.logoutButton.waitForDisplayed()
         await this.logoutButton.click()
     }
 

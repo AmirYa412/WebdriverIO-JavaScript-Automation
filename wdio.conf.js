@@ -9,6 +9,7 @@ exports.config = {
         login: ['./test/specs/test-login.js'],
         alerts: ['./test/specs/test-js-alert.js'],
         elements: ['./test/specs/test-add-elements.js'],
+        hovers: ['./test/specs/test-hovers.js']
     },
     exclude: [
         // 'path/to/excluded/files'

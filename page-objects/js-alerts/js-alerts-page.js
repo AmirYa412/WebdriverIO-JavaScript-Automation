@@ -22,6 +22,7 @@ class JavaScriptAlerts extends Page {
             "confirm": this.confirmAlertBtn,
             "prompt": this.promptAlertBtn
         }
+        await alertButtons[button].waitForDisplayed()
         await alertButtons[button].click()
     }
 }

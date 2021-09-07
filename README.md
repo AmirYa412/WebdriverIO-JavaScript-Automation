@@ -1,7 +1,7 @@
 ## Test Automation Project - Mocha framework with WebdriverIO
 
 ### Info
-This repo contains a Web UI test automation project written in JavaScript. It is using ```Mocha``` framework, ```WebdriverIO(v7)``` and page object  model.
+This repo contains a Web UI test automation project written in JavaScript. It is based on ```Mocha``` framework, ```WebdriverIO(v7)``` and page object  model.
 Each test file showing an example of different assertion library:
 
 * Node.js built-in assert
@@ -10,7 +10,7 @@ Each test file showing an example of different assertion library:
 
 ### Installation
 Project has been tested and verified on ```Node.js v14``` on both ```MacOS & Windows 10```.
-To install project's dependencies inside main dir run:
+To install project's dependencies, inside main dir run:
 ```
 npm install
 npm install -g allure-commandline
@@ -26,6 +26,7 @@ You can run 3 different test files and generate an Allure & HTML reports.
 | ```npx wdio --suite alerts```  | Run test-js-alerts |
 | ```npx wdio --suite elements```  | Run test-add-elements |
 | ```npx wdio --suite alerts login```  | Run 2 suites (2 files in this case) |
+| ```npx wdio --spec ./test/specs/test-login.js```  | Run specific file |
 
 
 ### Reports
