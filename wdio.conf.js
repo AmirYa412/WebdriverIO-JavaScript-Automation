@@ -1,5 +1,10 @@
-import {ReportAggregator}    from 'wdio-html-nice-reporter';
+import TestedEnvironment     from './core/set-environment'
+import {ReportAggregator}    from 'wdio-html-nice-reporter'
 let reportAggregator = ReportAggregator
+
+const envPrefix = (!process.env.ENV) ? "prod" : process.env.ENV                    // Default test env: Production
+const env = new TestedEnvironment(envPrefix)
+global.testsData = env.testsData                               // Make global so we can access env details & data
 
 exports.config = {
     specs: [
@@ -25,7 +30,7 @@ exports.config = {
     // Level of logging verbosity: trace | debug | info | warn | error | silent
     logLevel: 'silent',
     bail: 0,
-    baseUrl: 'https://the-internet.herokuapp.com',
+    baseUrl: env["baseUrl"],
     waitforTimeout: 10000,
     connectionRetryTimeout: 120000,
     connectionRetryCount: 3,
@@ -34,9 +39,9 @@ exports.config = {
     // Framework you want to run your specs with.
     framework: 'mocha',
     reporters: [
-        'spec',                                                 //  Spec https://webdriver.io/docs/spec-reporter/
+        'spec',                                                  //  Spec https://webdriver.io/docs/spec-reporter/
         ['allure', {
-            outputDir: 'reports/allure/allure-results'}],
+            outputDir: 'reports/allure/allure-results'}],       // https://webdriver.io/docs/allure-reporter/
         ["html-nice", {                                        // html-nice-report https://webdriver.io/docs/rpii-wdio-html-reporter/
             outputDir: 'reports/html-reports/',
             filename: 'report.html',
@@ -52,6 +57,7 @@ exports.config = {
         ui: 'bdd',
         timeout: 60000
     },
+
     onPrepare: function (config, capabilities) {
 
         reportAggregator = new ReportAggregator({
@@ -70,3 +76,4 @@ exports.config = {
         })()
     },
 }
+

@@ -1,0 +1,17 @@
+{
+  "LoginPage": {
+    "username": "dev-user",
+    "password": "passwordForDevenv",
+    "loginExpectedMsg": "You logged into a Dev env secure area!",
+    "logoutExpectedMsg": "You logged out of the Dev env secure area!",
+    "blockedExpectedMsg": "You must login to view the Dev env secure area!"
+  },
+  "JavaScriptAlertsPage": {
+    "singleAlertMsg": "I am a JS Alert in Dev env",
+    "confirmAlertMsg": "I am a JS Confirm in []Dev env",
+    "promptAlertMsg": "I am a JS prompt in Dev env"
+  },
+  "AddElementsPage": {},
+  "HoversPage": {}
+}
+

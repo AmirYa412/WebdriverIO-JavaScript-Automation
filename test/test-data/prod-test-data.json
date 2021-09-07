@@ -1,0 +1,16 @@
+{
+  "LoginPage": {
+    "username": "tomsmith",
+    "password": "SuperSecretPassword!",
+    "loginExpectedMsg": "You logged into a secure area!",
+    "logoutExpectedMsg": "You logged out of the secure area!",
+    "blockedExpectedMsg": "You must login to view the secure area!"
+  },
+  "JavaScriptAlertsPage": {
+    "singleAlertMsg": "I am a JS Alert",
+    "confirmAlertMsg": "I am a JS Confirm",
+    "promptAlertMsg": "I am a JS prompt"
+  },
+  "AddElementsPage": {},
+  "HoversPage": {}
+}
