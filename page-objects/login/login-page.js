@@ -8,12 +8,12 @@ class LoginPage extends Page {
         super()
         this.path = "/login"
     }
-    get inputUsername () { return $('#username') }
-    get inputPassword () { return $('#password') }
-    get submitBtn () { return $('button[type="submit"]') }
-    get logoutFlashMsg () { return $('#flash') }
+    get inputUsername() { return $('#username') }
+    get inputPassword() { return $('#password') }
+    get submitBtn() { return $('button[type="submit"]') }
+    get logoutFlashMsg() { return $('#flash') }
 
-    async navigate () {
+    async navigate() {
         await super.open(this.path)
     }
 

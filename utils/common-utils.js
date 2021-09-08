@@ -1,4 +1,6 @@
 "use strict"
+
+
 class StringGenerator {
 
     constructor() {

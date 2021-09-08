@@ -8,10 +8,10 @@ class AddElementsPage extends Page {
         super()
         this.path = "/add_remove_elements/"
     }
-    get addElementBtn () { return $('//button[@onclick="addElement()"]') }
-    get displayedElements () { return $$('//div[@id="elements"]//button') }
+    get addElementBtn() { return $('//button[@onclick="addElement()"]') }
+    get displayedElements() { return $$('//div[@id="elements"]//button') }
 
-    async navigate () {
+    async navigate() {
         await super.open(this.path)
     }
 

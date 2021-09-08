@@ -8,12 +8,12 @@ class JavaScriptAlertsPage extends Page {
         super()
         this.path = "/javascript_alerts"
     }
-    get singleAlertBtn () { return $('//button[@onclick="jsAlert()"]') }
+    get singleAlertBtn() { return $('//button[@onclick="jsAlert()"]') }
     get confirmAlertBtn() { return $('//button[@onclick="jsConfirm()"]') }
-    get promptAlertBtn () { return $('//button[@onclick="jsPrompt()"]') }
-    get resultText () { return $('#result') }
+    get promptAlertBtn() { return $('//button[@onclick="jsPrompt()"]') }
+    get resultText() { return $('#result') }
 
-    async navigate () {
+    async navigate() {
         await super.open(this.path)
     }
 

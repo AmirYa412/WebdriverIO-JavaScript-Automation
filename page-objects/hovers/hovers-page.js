@@ -8,11 +8,11 @@ class HoversPage extends Page {
         super()
         this.path = "/hovers"
     }
-    get figureImages () { return $$('//div[@class="figure"]/img') }
-    get figureNames () { return $$('//div[@class="figcaption"]/h5') }
-    get figureProfileLinks () { return $$('//div[@class="figcaption"]/a') }
+    get figureImages() { return $$('//div[@class="figure"]/img') }
+    get figureNames() { return $$('//div[@class="figcaption"]/h5') }
+    get figureProfileLinks() { return $$('//div[@class="figcaption"]/a') }
 
-    async navigate () {
+    async navigate() {
         await super.open(this.path)
     }
 

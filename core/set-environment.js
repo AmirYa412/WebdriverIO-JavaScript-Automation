@@ -1,6 +1,7 @@
 "use strict"
 import fs from "fs"
 
+
 export default class TestedEnvironment {
 
     constructor(envPrefix) {

@@ -8,10 +8,10 @@ class SecurePage extends Page {
         super()
         this.path = "/secure"
     }
-    get loginFlashMsg () { return $('#flash') }
+    get loginFlashMsg() { return $('#flash') }
     get logoutButton() { return $('//a[@href="/logout"]') }
 
-    async navigate () {
+    async navigate() {
         await super.open(this.path)
     }
 

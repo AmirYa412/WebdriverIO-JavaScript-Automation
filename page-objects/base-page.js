@@ -1,10 +1,10 @@
 "use strict"
-import { config }    from "../wdio.conf"
+import {config}    from "../wdio.conf"
 
 
 export default class Page {
 
-    async open (path) {
+    async open(path) {
         await browser.url(config.baseUrl+path)
     }
 
