@@ -4,7 +4,6 @@ let reportAggregator = ReportAggregator
 
 const envPrefix = (!process.env.ENV) ? "prod" : process.env.ENV                    // Default test env: Production
 const env = new TestedEnvironment(envPrefix)
-global.testsData = env.testsData                               // Make global so we can access env.testsData in tests
 
 exports.config = {
     specs: [
@@ -55,9 +54,12 @@ exports.config = {
         ui: 'bdd',
         timeout: 60000
     },
+    beforeSession: function () {
+        // Global Test Utils
+        global.testsData = env.testsData
+    },
 
     onPrepare: function (config, capabilities) {
-
         reportAggregator = new ReportAggregator({
             outputDir: './reports/html-reports/',
             filename: 'master-report.html',

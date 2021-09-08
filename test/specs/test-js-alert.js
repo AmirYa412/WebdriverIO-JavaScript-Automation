@@ -2,7 +2,7 @@ import JavaScriptAlertsPage    from "../../page-objects/js-alerts/js-alerts-page
 import {assert}                from "chai"
 
 
-const testData = global.testsData["JavaScriptAlertsPage"]
+const testData = testsData["JavaScriptAlertsPage"]
 describe("JavaScriptAlertPage", () => {
 
     // Assertion lib:      Chai assert

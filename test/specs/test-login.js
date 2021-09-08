@@ -2,7 +2,7 @@ import LoginPage     from "../../page-objects/login/login-page"
 import SecurePage    from "../../page-objects/login/secure-page"
 
 
-const testData = global.testsData["LoginPage"]
+const testData = testsData["LoginPage"]
 describe("LoginPage", () => {
 
     // Assertions lib:      WebdriverIO built-in expect()

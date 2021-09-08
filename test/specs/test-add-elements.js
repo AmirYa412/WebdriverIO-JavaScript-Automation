@@ -2,7 +2,7 @@ import AddElementsPage    from "../../page-objects/add-elements/add-elements-pag
 import assert             from "assert"
 
 
-const testData = global.testsData["AddElementsPage"]
+const testData = testsData["AddElementsPage"]
 describe("AddElementsPage", () => {
 
     // Assertion lib:      Node.js Built-in assert

@@ -1,7 +1,7 @@
 import HoversPage     from "../../page-objects/hovers/hovers-page"
 
 
-const testData = global.testsData["HoversPage"]
+const testData = testsData["HoversPage"]
 describe("HoversPage", () => {
 
     // Assertions lib:      WebdriverIO built-in expect()
