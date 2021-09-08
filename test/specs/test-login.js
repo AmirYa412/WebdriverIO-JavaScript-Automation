@@ -1,3 +1,4 @@
+"use strict"
 import LoginPage     from "../../page-objects/login/login-page"
 import SecurePage    from "../../page-objects/login/secure-page"
 

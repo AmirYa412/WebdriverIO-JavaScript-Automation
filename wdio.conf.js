@@ -1,9 +1,10 @@
+"use strict"
 import TestedEnvironment     from './core/set-environment'
 import {ReportAggregator}    from 'wdio-html-nice-reporter'
 let reportAggregator = ReportAggregator
 
 const envPrefix = (!process.env.ENV) ? "prod" : process.env.ENV                    // Default test env: Production
-const env = new TestedEnvironment(envPrefix)
+const testedEnv = new TestedEnvironment(envPrefix)
 
 exports.config = {
     specs: [
@@ -27,9 +28,9 @@ exports.config = {
     // Level of logging verbosity: trace | debug | info | warn | error | silent
     logLevel: 'silent',
     bail: 0,
-    baseUrl: env["baseUrl"],
+    baseUrl: testedEnv["baseUrl"],
     waitforTimeout: 10000,
-    connectionRetryTimeout: 120000,
+    connectionRetryTimeout: 10000,
     connectionRetryCount: 3,
     services: ['chromedriver'],
 
@@ -56,7 +57,7 @@ exports.config = {
     },
     beforeSession: function () {
         // Global Test Utils
-        global.testsData = env.testsData
+        global.testsData = testedEnv.testsData
     },
 
     onPrepare: function (config, capabilities) {

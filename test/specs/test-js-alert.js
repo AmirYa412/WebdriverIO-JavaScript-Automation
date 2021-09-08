@@ -1,3 +1,4 @@
+"use strict"
 import JavaScriptAlertsPage    from "../../page-objects/js-alerts/js-alerts-page"
 import {assert}                from "chai"
 

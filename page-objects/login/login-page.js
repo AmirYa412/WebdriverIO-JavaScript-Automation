@@ -1,3 +1,4 @@
+"use strict"
 import Page    from "../base-page"
 
 

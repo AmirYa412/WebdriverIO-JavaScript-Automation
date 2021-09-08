@@ -1,3 +1,4 @@
+"use strict"
 import AddElementsPage    from "../../page-objects/add-elements/add-elements-page"
 import assert             from "assert"
 

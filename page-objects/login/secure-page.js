@@ -1,3 +1,4 @@
+"use strict"
 import Page    from "../base-page"
 
 
@@ -7,7 +8,6 @@ class SecurePage extends Page {
         super()
         this.path = "/secure"
     }
-
     get loginFlashMsg () { return $('#flash') }
     get logoutButton() { return $('//a[@href="/logout"]') }
 

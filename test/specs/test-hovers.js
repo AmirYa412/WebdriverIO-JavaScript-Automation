@@ -1,3 +1,4 @@
+"use strict"
 import HoversPage     from "../../page-objects/hovers/hovers-page"
 
 

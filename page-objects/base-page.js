@@ -1,3 +1,4 @@
+"use strict"
 import { config }    from "../wdio.conf"
 
 
